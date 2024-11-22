@@ -2,7 +2,7 @@ using FluentAssertions;
 
 namespace FP.Tests
 {
-    public class Tests
+    public class Exercises001Test
     {
 
         [Test]
