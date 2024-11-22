@@ -20,5 +20,26 @@ namespace FP
             {
                 return Regex.IsMatch(input, @"^A.*!$");
             };
+
+        public static Func<string, string, int> SumIndices = (string1, string2) =>
+        string1.IndexOf('a')
+        + string2.IndexOf('e');
+
+
+        public static string CheckValidEmail(string input)
+        {
+            Predicate<string> domainChecker = input => Regex.IsMatch(input, @"@northcoders\.co\.uk$");
+            Predicate<string> userNameChecker = input => Regex.IsMatch(input, @"\w{5,}@");
+            if (domainChecker(input) && userNameChecker(input))
+            {
+                return "Email domain and user valid, please continue";
+            }
+            else
+            {
+                return "Email domain and user name invalid, please check your input";
+            }
+        }
+
+        
     }
 }

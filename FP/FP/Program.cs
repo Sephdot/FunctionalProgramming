@@ -13,6 +13,12 @@
             List<string> words = new List<string> { "Amazing!", "apple!", "Awesome!", "Artichoke" };
 
             words.ForEach(word => Console.WriteLine(Exercises001.GrammarCheck(word)));
+
+            Console.WriteLine(Exercises001.SumIndices("start", "pale"));
+            Console.WriteLine(Exercises001.CheckValidEmail("david@northcoders.co.uk"));
+
+
+
         }
     }
 }
